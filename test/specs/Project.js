@@ -1,14 +1,18 @@
-const ProjectLogin = require('../pageobjects/ProjectLogin.js')
+// const ProjectLogin = require('../pageobjects/ProjectLogin.js')
 // const expectchai = require('chai').expect
 
-require('../pageobjects/ProjectLogin.js')
 describe('Demo Website',async()=>{
 
     it('E2E Test',async()=>{
 
         const products = ['Sauce Labs Bolt T-Shirt','Test.allTheThings() T-Shirt (Red)']
+        
         await browser.url("https://www.saucedemo.com/")
-        await ProjectLogin.LoginPage()
+
+        // await ProjectLogin.LoginPage()
+        await $("#user-name").setValue("standard_user")
+        await $("#password").setValue("secret_sauce")
+        await $("#login-button").click()
 
         await expect(browser).toHaveTitle(expect.stringContaining("Swag Labs"))
 
