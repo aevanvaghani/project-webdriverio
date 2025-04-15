@@ -52,32 +52,5 @@ it('Login Success page title',async()=>
    // await expect(browser).toHaveUrlContaining("shop")
     await expect(browser).toHaveUrl(expect.stringContaining("shop"))
     await expect(browser).toHaveTitle("ProtoCommerce")
-
-
-
-
-
-
-
-
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
